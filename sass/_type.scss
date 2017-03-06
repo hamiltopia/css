@@ -1,0 +1,139 @@
+//	----------------
+//	Text ---------
+//	----------------
+
+
+//  Text Sizing ----------
+html {
+  font-size: 14px;
+}
+
+@media (min-width: $screen-sm) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $screen-md) {
+  html {}
+}
+
+@media (min-width: $screen-lg) {
+  html {
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+//  Headers ----------
+h1, h2, .lead, .display-1, .display-2, .display-3, .display-4 {
+  color:$text-two;
+}//paragraph
+
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom:1rem;
+}
+
+
+//	----------------
+//	H6 ---------
+//	----------------
+
+h6 {
+  &.listing-title {
+    margin:0;
+  }
+}//h6
+
+
+
+//	----------------
+//	Paragraph ---------
+//	----------------
+p {
+  color:$text;
+}//paragraph
+
+
+//  Link ----------
+a {
+    color:$text-link;
+    text-decoration: none;
+
+    &:hover {
+      color:$text-link-hover;
+      text-decoration: underline;
+    }//hover
+}//href
+
+
+
+
+
+//	----------------
+//	Buttons ---------
+//	----------------
+
+//  Primary ----------
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.btn-outline-primary {
+  color: $primary-color;
+  border-color: $primary-color;
+}//.btn-outline-primary
+
+//  Success ----------
+.btn-success {
+  background-color: $success-color;
+  border-color: $success-color;
+}
+
+.btn-outline-success {
+  color: $success-color;
+  border-color: $success-color;
+}//.btn-outline-success
+
+
+
+//  Info ----------
+.btn-info {
+  background-color: $info-color;
+  border-color: $info-color;
+}
+
+.btn-outline-info {
+  color: $info-color;
+  border-color: $info-color;
+}//.btn-outline-info
+
+
+//  Warning ----------
+.btn-warning {
+  background-color: $warning-color;
+  border-color: $warning-color;
+}
+
+.btn-outline-warning {
+  color: $warning-color;
+  border-color: $warning-color;
+}//.btn-outline-warning
+
+
+//  Primary ----------
+.btn-danger {
+  background-color: $danger-color;
+  border-color: $danger-color;
+}
+
+.btn-outline-danger {
+  color: $danger-color;
+  border-color: $danger-color;
+}//.btn-outline-warning

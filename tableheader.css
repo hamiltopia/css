@@ -1,0 +1,48 @@
+.tableSection {
+  position: relative;
+  border: 1px solid #000;
+  padding-top: 37px;
+  background: #500;
+}
+
+.tableSectionStandard  {
+  overflow-y: auto;
+  height: 200px;
+}
+
+.tableSection  table {
+  border-spacing: 0;
+  width:100%;
+}
+
+.tableSection  td + td {
+  border-left:1px solid #eee;
+}
+.tableSection td, .tableSection th {
+  border-bottom:1px solid #eee;
+  background: #ddd;
+  color: #000;
+  padding: 10px 25px;
+}
+.tableSection th {
+  height: 0;
+  line-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: transparent;
+  border: none;
+  white-space: nowrap;
+}
+.tableSection th div{
+  position: absolute;
+  background: transparent;
+  color: #fff;
+  padding: 9px 25px;
+  top: 0;
+  margin-left: -25px;
+  line-height: normal;
+  border-left: 1px solid #800;
+}
+.tableSection th:first-child div{
+  border: none;
+}

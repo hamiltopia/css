@@ -1,0 +1,22 @@
+
+
+//Colors
+$primary-color:#0275d8;//blue
+$success-color:#5cb85c;//green
+$info-color:#5bc0de;//light blue
+$warning-color:#f0ad4e;//orange
+$danger-color:#d9534f;//red
+
+
+//  Text Color ----------
+$text:#262626;
+$text-two:lighten( $text, 15% );
+$text-three:lighten( $text, 25% );
+
+$text-link:lighten( $primary-color, 0% );
+$text-link-hover:lighten( $text-link, 15% );
+
+
+//  Navigation Colors ----------
+$nav-base:lighten( $primary-color, 0% );
+$nav-text:#FFF;

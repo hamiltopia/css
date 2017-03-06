@@ -1,0 +1,31 @@
+
+	.showval  {
+		font-size: 8pt;
+		font-weight: normal;
+		border: 2px solid #1ee3ff;
+		border-spacing:0;
+		border-collapse:collapse;		
+	}
+	
+	
+	.showval td {
+		vertical-align: top;
+	}
+	.showval button { padding: 0px; height: 20px; width: 80px; margin: 0px; }
+	
+	.showval td>table {
+		display: none; 
+		width: 100%;
+	}
+	
+	.showval tr:nth-child(odd) {
+		background-color: #1ee3ff;
+	}	
+	.showval tr:nth-child(even) {
+		background-color: #fff;
+	}	
+	
+	
+	
+	
+	

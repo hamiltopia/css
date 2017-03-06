@@ -1,0 +1,780 @@
+
+@import "theme";
+@import "vars";
+@import "type";
+
+
+/* ---------- *\
+BODY
+\* ---------- */
+body {
+  padding-top:4rem;
+
+  @media (min-width: $screen-sm) {
+    padding-top:7.5rem;
+  }//break
+}
+
+/* ---------- *\
+Padding in nested Container
+\* ---------- */
+.container-fluid {
+  .container {
+    padding-left:0;
+    padding-right:0;
+  }//container-fluid
+}//container-fluid
+
+
+/* ---------- *\
+Global Image Style
+\* ---------- */
+img {
+	display:block;
+	margin:0;
+	max-width:100%;
+  width:100%;
+}//img
+
+//Image in Figure container
+.figure {
+  max-width:100%;
+  width:100%;
+
+  .figure-img {
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.3);
+  }//img
+
+  &.figure-left {
+    @media (min-width: $screen-sm) {
+      float:left;
+      margin:0 2rem 1rem 0;
+      width:50%;
+    }//break
+  }//float-left
+
+  &.figure-right {
+    @media (min-width: $screen-sm) {
+      float:right;
+      margin:0 0 1rem 2rem;
+      width:50%;
+
+      .figure-img {
+        -webkit-box-shadow: -1px 1px 1px 1px rgba(0,0,0,.3);
+        box-shadow: -1px 1px 1px 1px rgba(0,0,0,.3);
+      }//img
+    }//break
+  }//float-left
+}//figure-image
+
+
+//Jumbotron
+.jumbotron {
+  @include border-radius(0);
+  border:none;
+
+  background: $primary-color;
+  background: -moz-linear-gradient(45deg, $primary-color 0%, $info-color 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, $primary-color), color-stop(100%, $info-color));
+  background: -webkit-linear-gradient(45deg, $primary-color 0%, $info-color 100%);
+  background: -o-linear-gradient(45deg, $primary-color 0%, $info-color 100%);
+  background: -ms-linear-gradient(45deg, $primary-color 0%, $info-color 100%);
+  background: linear-gradient(45deg, $primary-color 0%, $info-color 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary-color', endColorstr='$info-color', GradientType=1 );
+
+
+  h1,
+  p {
+    color:$white;
+  }//h1
+}
+
+
+
+//  Site Mast Head - Logo and Nav
+.masthead {
+  background-color:$white;
+  border-bottom:1px solid $white-one;
+  height:4rem;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  z-index:1000;
+  transition:all .3s;
+
+  @media (min-width: $screen-sm) {
+    height:7.5rem;
+  }//break
+
+  .container {
+    @extend .clearfix;
+    height:100%;
+    padding-left:0;
+    padding-right:0;
+    position:relative;
+  }//container
+
+  .navbar-header {
+    @extend .clearfix;
+
+    @media (min-width: $screen-sm) {
+     float: left;
+   }//break
+  }//navbar-header
+}//navbar
+
+//Scrolling MAsthead
+.scroll {
+  .masthead {
+    @media (min-width: $screen-sm) {
+      height:6rem;
+    }//break
+  }
+}//scroll
+
+
+
+
+
+//Site Name and logo
+.navbar-brand {
+  //@extend .clearfix;
+  float:left;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $screen-sm) {
+  }//break
+
+
+  a {
+    @extend .clearfix;
+    color:$black-one;
+    display:block;
+
+    img {
+      width: auto;
+      height: 3rem;
+      float: left;
+      margin: .5rem .8rem .5rem 0;
+      transition:all .3s ease;
+
+      @media (min-width: $screen-sm) {
+       height: 4rem;
+      }//break
+    }//img
+
+    strong {
+      display:none;
+      overflow:hidden;
+    }
+  }//href
+}//navbar-brand
+
+//Scrolling MAsthead
+.scroll {
+  .navbar-brand {
+    a {
+      img {
+        height: 2.5rem;
+      }//img
+    }//href
+  }//navbar-brand
+}//scroll
+
+
+/* ---------- *\
+  CARD - HEADER
+\* ---------- */
+.card-header {
+	line-height:1.4rem;
+
+	.profile-avatar {
+		@include border-radius(50%);
+		float:left;
+		height:3rem;
+		margin:0 1rem 0 0;
+		width:auto;
+	}//profile-avatar
+
+	span {
+		display:block;
+		overflow:hidden;
+
+		small {
+			color:#999;
+			display:block;
+		}
+	}
+}//card-header
+
+/* ---------- *\
+  CARD - PROFILE
+\* ---------- */
+.card {
+  &.profile-badge {
+    .card-img-top {
+      &.profile-image {
+        @include border-radius(50%);
+        height:auto;
+        margin:10% auto 0;
+        width:60%;
+      }//profile-image
+    }//card-img-top
+  }//profile-badge
+
+  &:not(:first-child),
+  &:not(:last-child) {
+    .card-img-top {
+      &.profile-image {
+        @include border-radius(50%);
+      }//profile-image
+    }//card-img-top
+  }
+}//card
+
+.card-group {
+  .card {
+    &:not(:first-child):not(:last-child) {
+      .card-img-top {
+        &.profile-image {
+          @include border-radius(50%);
+        }//profile-image
+      }//card-img-top
+    }
+  }//card
+}//card-group
+
+
+
+/* ---------- *\
+  NAVIGATION
+\* ---------- */
+  .navigation {
+  	background-color:#FFF;
+  	display:none;
+  	list-style-type:none;
+  	padding:0;
+    margin: 0 auto;
+    width: 100%;
+
+    position:absolute;
+    top:4rem;
+    left:0;
+    z-index:100;
+
+  	@media (min-width: $screen-sm) {
+      border-top:1px solid $white-one;
+  		background-color:transparent;
+  		display:block!important;
+      top:auto;
+      bottom:0;
+  	}//break
+
+    //Link - Main
+  	a {
+  		color:$link;
+
+  		&:hover,
+  		&:focus {
+  			color:$nav-base;
+  		}//hover
+
+  		@media (min-width: $screen-sm) {
+  			color:$white;
+
+  			&:hover,
+  			&:focus {
+          color:$white;
+          background-color:$nav-base;
+  			}//hover
+  		}//break
+
+  		//	Icon ---------
+  		&.active {
+  			background-color:$nav-base;
+  			color:$white;
+  		}//active
+  	}//href
+
+
+  	//	Nested UL ---------
+  	ul {
+  		background-color:#EFEFEF;
+  		list-style-type:none;
+  		padding:0;
+  		margin:0;
+  		width:100%;
+
+  		@media (min-width: $screen-sm) {
+  			width:15rem;
+
+  			position:absolute;
+  			top:100%;
+  			left:0;
+  			z-index:1;
+  		}//break
+
+      a {
+        color:$white;
+  			line-height:normal;
+  			padding-top:.5rem;
+  			padding-bottom:.5rem;
+
+        &.btn {
+          color:$white;
+        }//btn
+  		}//href
+
+
+			//	 third level ---------
+			ul {
+				background-color:#DEDEDE;
+				position:relative;
+			}//nested ul
+  	}//ul
+
+  	//	LI ---------
+  		li {
+  			display:block;
+  			position:relative;
+
+  			@media (min-width: $screen-sm) {
+  				float:left;
+  			}//break
+
+  			li {
+  				float:none;
+  			}//nested li
+  		}//li
+
+
+  		a {
+  			display:block;
+        font-size:.8rem;
+  			line-height:2.5rem;
+  			padding-top:0;
+  			padding-bottom:0;
+  			text-align:left;
+        white-space: normal;
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration:none;
+        }
+
+        img {
+          float:left;
+          height:2.5rem;
+          width:auto;
+        }
+
+  			.fa-plus {
+          display:none;
+  				font-size:90%;
+  				transition:all .3s ease;
+  			}//span
+
+        //Show the icon for elements with a subnav
+        &.expandoption {
+          .fa-plus {
+            display:inline-block;
+    			}//span
+        }//expandoption
+
+  			//	Icon ---------
+  			&.active {
+  				color:$white;
+
+  				.fa-plus {
+  					@include rotate(45deg);
+  				}//span
+  			}//active
+  		}//href
+
+  }//navigation
+
+  /* ---------- *\
+    NAVIGATION - Themeing
+  \* ---------- */
+  .navigation {
+  	background-color:$link;
+
+  	@media (min-width: $screen-sm) {
+  		background-color:transparent;
+  	}//break
+
+    //  Nested HREF - first Level
+    a {
+      color:$white;
+
+      @media (min-width: $screen-sm) {
+        color:$link;
+      }//break
+    }//href
+
+  	//	Nested UL - second Level ---------
+  	ul {
+  		background-color:$nav-base;
+
+      //  Nested HREF - second Level
+  		a {
+        color:$white;
+
+        &:hover,
+        &:focus {
+          background-color:darken( $nav-base, 10% );
+        }//hover
+
+  			//	Icon ---------
+  			&.active {
+  				background-color:darken( $nav-base, 10% );
+
+          &:hover,
+      		&:focus {
+            background-color:darken( $nav-base, 10% );
+      		}//hover
+  			}//active
+
+  			@media (min-width: $screen-sm) {
+  				color:$white;
+  			}//break
+  		}//href
+
+			//	Nested UL - third level ---------
+			ul {
+				background-color:darken( $nav-base, 10% );
+
+        //  Nested HREF - fourth level
+        a {
+          color:$white;
+
+          &:hover,
+          &:focus {
+            background-color:darken( $nav-base, 15% );
+          }//hover
+
+    			//	Icon ---------
+    			&.active {
+            &:hover,
+        		&:focus {
+              background-color:darken( $nav-base, 15% );
+        		}//hover
+    			}//active
+    		}//href
+			}//nested ul
+
+
+  	}//ul
+  }//navigation
+
+
+
+
+  // Site Navigation
+  .site-nav {
+    border:none;
+    position:absolute;
+    top:1.2rem;
+    right:3rem;
+    width:50%;
+    z-index:2;
+
+    @media (min-width: $screen-sm) {
+      right:0;
+      top:.5rem;
+    }//break
+  }//site-nav
+
+
+
+  /* ---------- *\
+    NAV BUTTON ICONS
+  \* ---------- */
+  .nav-button {
+    float:right;
+    margin:1rem 0;
+    background-color:$white;
+    color:$nav-base;
+
+    &:hover,
+    &:focus,
+    &.active,
+    &.btn-link:active,
+    &.btn-link:disabled {
+      background-color:$white;
+      color:$nav-base;
+    }//hover
+
+    .fa-bars { display:block; }
+    .fa-times { display:none; }
+
+    &.active {
+      .fa-bars { display:none; }
+      .fa-times { display:block; }
+    }//active
+
+  	@media (min-width: $screen-sm) {
+  		display: none;
+  	}//break
+  }//nav-button
+
+
+
+
+
+
+  /* ---------- *\
+  COMMENT BUBBLE
+  \* ---------- */
+  .bubble {
+  	@include border-radius(25px);
+  	display:inline-block;
+    line-height:normal;
+    margin-bottom:3rem;
+  	padding:10px;
+  	position:relative;
+  	background: $primary-color;
+  	background: -moz-linear-gradient(45deg, $primary-color 0%, $primary-color 70%, $info-color 100%);
+  	background: -webkit-gradient(left bottom, right top, color-stop(0%, $primary-color), color-stop(70%, $primary-color), color-stop(100%, $info-color));
+  	background: -webkit-linear-gradient(45deg, $primary-color 0%, $primary-color 70%, $info-color 100%);
+  	background: -o-linear-gradient(45deg, $primary-color 0%, $primary-color 70%, $info-color 100%);
+  	background: -ms-linear-gradient(45deg, $primary-color 0%, $primary-color 70%, $info-color 100%);
+  	background: linear-gradient(45deg, $primary-color 0%, $primary-color 70%, $info-color 100%);
+  	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary-color', endColorstr='$info-color', GradientType=1 );
+
+  &:after {
+  	display:block;
+  	content:" ";
+    width: 0;
+    height: 0;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-right: 60px solid $primary-color;
+
+    position:absolute;
+  	right:6rem;
+  	bottom:-1.8rem;
+    z-index:1;
+  }
+
+  	span {
+  		@include border-radius(20px);
+  		background-color:$white;
+      display:block;
+  		padding:1rem;
+  		position:relative;
+  		z-index:10;
+
+  		&:after {
+  			display:block;
+  			content:" ";
+  			width: 0;
+  			height: 0;
+  			border-top: 35px solid transparent;
+  			border-bottom: 35px solid transparent;
+  			border-right: 60px solid $white;
+
+  			position:absolute;
+  			right:6rem;
+  			bottom:-1.4rem;
+        z-index:2;
+  		}//after
+  	}//content
+
+    strong {
+      display:block;
+      position:relative;
+      z-index:20;
+      font-weight:normal;
+    }//strong
+
+    em {
+      position:relative;
+      z-index:20;
+      font-size:1rem;
+    }//em
+}//bubble
+
+
+
+/* ---------- *\
+AUTHOR BADGE
+\* ---------- */
+.author-badge {
+  line-height:1.4rem;
+
+	.profile-avatar {
+		@include border-radius(50%);
+		float:left;
+		height:3rem;
+		margin:0 1rem 0 0;
+		width:auto;
+	}//profile-avatar
+
+	span {
+		display:block;
+		overflow:hidden;
+
+		small {
+			color:$white-two;
+			display:block;
+		}//small
+	}//span
+}//author-badge
+
+
+/* ---------- *\
+BREADCRUMB
+\* ---------- */
+.breadcrumb {
+  .breadcrumb-item {
+    font-size:.8rem;
+  }//breadcrumb-item
+}//breadcrumb
+
+
+/* ---------- *\
+Chapter NAV, Post LIst
+\* ---------- */
+.chapter-nav,
+.post-list {
+
+  .nav-link {
+    font-weight:bold;
+    margin-bottom:1rem;
+    padding:0;
+
+    small,
+    em,
+    strong {
+      color:$white-two;
+      display:block;
+      font-size:70%;
+      font-weight: normal;
+    }//all
+
+    small {
+      text-transform:uppercase;
+    }//small
+
+    em {
+      font-style:normal;
+      margin: .4rem 0;
+    }//em
+
+    strong {
+      font-size: 80%;
+      line-height:1rem;
+    }//strong
+  }//chapter-nav
+}//post-list
+
+
+//Nav link in card
+// .card {
+//   .chapter-nav,
+//   .post-list {
+//     .nav-link {
+//       margin:0;
+//       padding:0;
+//     }//nav
+//   }//chapter-post
+// }//card
+
+/* ---------- *\
+Chapter Title
+\* ---------- */
+.chapter-head {
+  border-bottom: 1px solid $white-one;
+	margin:2rem 0;
+  padding: 0 0 2rem;
+	position:relative;
+	text-align:center;
+
+  .chapter-label {
+    color:$white-two;
+    display:block;
+    font-size:70%;
+    margin: 0 auto;
+    text-transform:uppercase;
+  }//chapter-label
+
+	.chapter-title {
+		background-color:#FFF;
+		display:inline-block;
+		padding:0 2rem;
+		position:relative;
+		z-index:2;
+	}//chapter-title
+
+  .chapter-summary {
+    color:$white-two;
+    margin: 0 auto;
+    width: 75%;
+  }//chapter-summary
+}//chapter-title
+
+
+/* ---------- *\
+HR - HORIZONTAL RULE
+\* ---------- */
+.hoz {
+	@include border-radius(50%);
+	height:.6rem;
+	background-color:$white-one;
+	position:relative;
+	width:.6rem;
+
+	&:before,
+	&:after{
+		@include border-radius(50%);
+		content:" ";
+		display:block;
+		background-color:$white-one;
+		height:.6rem;
+		width:.6rem;
+
+		position:absolute;
+		top:0;
+		z-index:1;
+	}//before
+
+	&:before {
+		left:200%;
+	}//before
+
+	&:after {
+		right:200%;
+	}//before
+}//horizontal
+
+
+
+
+
+/* ---------- *\
+CAROUSEL
+\* ---------- */
+.carousel {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 2rem;
+
+    .fa {
+      color: $link;
+      font-size: 4rem;
+    }//icon
+  }//href-next,prev
+
+  .carousel-control-prev {
+    left:-1.5rem;
+  }//.carousel-control-prev
+
+  .carousel-control-next {
+    right:-1.5rem;
+  }//.carousel-control-prev
+}//carousel
