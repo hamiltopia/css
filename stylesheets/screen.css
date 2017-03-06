@@ -12,110 +12,113 @@ body {
   clear: both;
 }
 
-/* line 7, ../sass/_type.scss */
-html {
+/* line 6, ../sass/_type.scss */
+html,
+body {
   font-size: 14px;
 }
-
-@media (min-width: 768px) {
-  /* line 12, ../sass/_type.scss */
-  html {
+@media (min-width: 992px) {
+  /* line 6, ../sass/_type.scss */
+  html,
+  body {
     font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 22, ../sass/_type.scss */
-  html {
+  /* line 6, ../sass/_type.scss */
+  html,
+  body {
     font-size: 18px;
   }
 }
-/* line 33, ../sass/_type.scss */
+
+/* line 26, ../sass/_type.scss */
 h1, h2, .lead, .display-1, .display-2, .display-3, .display-4 {
   color: #4c4c4c;
 }
 
-/* line 37, ../sass/_type.scss */
+/* line 30, ../sass/_type.scss */
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-/* line 48, ../sass/_type.scss */
+/* line 41, ../sass/_type.scss */
 h6.listing-title {
   margin: 0;
 }
 
-/* line 58, ../sass/_type.scss */
+/* line 51, ../sass/_type.scss */
 p {
   color: #262626;
 }
 
-/* line 64, ../sass/_type.scss */
+/* line 57, ../sass/_type.scss */
 a {
   color: #0275d8;
   text-decoration: none;
 }
-/* line 68, ../sass/_type.scss */
+/* line 61, ../sass/_type.scss */
 a:hover {
   color: #299bfd;
   text-decoration: underline;
 }
 
-/* line 83, ../sass/_type.scss */
+/* line 76, ../sass/_type.scss */
 .btn-primary {
   background-color: #0275d8;
   border-color: #0275d8;
 }
 
-/* line 88, ../sass/_type.scss */
+/* line 81, ../sass/_type.scss */
 .btn-outline-primary {
   color: #0275d8;
   border-color: #0275d8;
 }
 
-/* line 94, ../sass/_type.scss */
+/* line 87, ../sass/_type.scss */
 .btn-success {
   background-color: #5cb85c;
   border-color: #5cb85c;
 }
 
-/* line 99, ../sass/_type.scss */
+/* line 92, ../sass/_type.scss */
 .btn-outline-success {
   color: #5cb85c;
   border-color: #5cb85c;
 }
 
-/* line 107, ../sass/_type.scss */
+/* line 100, ../sass/_type.scss */
 .btn-info {
   background-color: #5bc0de;
   border-color: #5bc0de;
 }
 
-/* line 112, ../sass/_type.scss */
+/* line 105, ../sass/_type.scss */
 .btn-outline-info {
   color: #5bc0de;
   border-color: #5bc0de;
 }
 
-/* line 119, ../sass/_type.scss */
+/* line 112, ../sass/_type.scss */
 .btn-warning {
   background-color: #f0ad4e;
   border-color: #f0ad4e;
 }
 
-/* line 124, ../sass/_type.scss */
+/* line 117, ../sass/_type.scss */
 .btn-outline-warning {
   color: #f0ad4e;
   border-color: #f0ad4e;
 }
 
-/* line 131, ../sass/_type.scss */
+/* line 124, ../sass/_type.scss */
 .btn-danger {
   background-color: #d9534f;
   border-color: #d9534f;
 }
 
-/* line 136, ../sass/_type.scss */
+/* line 129, ../sass/_type.scss */
 .btn-outline-danger {
   color: #d9534f;
   border-color: #d9534f;
